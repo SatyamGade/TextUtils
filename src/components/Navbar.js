@@ -21,9 +21,8 @@ export default function Navbar(props) {
                         <Link className="nav-link" to="/About">{props.aboutText}</Link>
                     </li>
                 </ul>
+                <button type="button" onClick={props.toggleMode} className={`btn btn-${props.mode === "Light" ? "dark" : "light"} mx-2`}>{props.mode === "Light" ? "Enable Dark Mode" : "Enable Light Mode"}</button>
             </div>
-
-            <button type="button" onClick={props.toggleMode} className={`btn btn-${props.mode === "Light" ? "dark" : "light"} mx-2`}>{props.mode === "Light" ? "Enable Dark Mode" : "Enable Light Mode"}</button>
         </nav>
     )
 }
